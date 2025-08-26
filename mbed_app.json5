@@ -1,0 +1,19 @@
+{
+    "config": {
+    },
+    "macros": [],
+    "target_overrides": {
+        "*": {
+            "platform.stdio-baud-rate"          : 115200,
+            "platform.default-serial-baud-rate" : 115200
+        },
+        "NUVOTON": {
+            "target.gpio-irq-debounce-enable"   : 1,
+            "target.usb-device-hsusbd"          : false
+        },
+        "NUMAKER_IOT_M467": {
+            /* Require HXT if HSUSBD is enabled */
+            "target.hxt-present"                : false
+        }
+    }
+}
